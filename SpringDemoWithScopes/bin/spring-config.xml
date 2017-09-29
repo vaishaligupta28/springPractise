@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	default-init-method="init" default-destroy-method="destroy"> <!-- init and destroy for all the beans -->
+
+	<bean id="checkSingleton" class="com.practise.bean.CheckSingleton" scope="singleton">
+		<property name="name" value="Singleton" />
+	</bean>
+
+	<bean id="checkPrototype" class="com.practise.bean.CheckPrototype" scope="prototype">
+		<property name="name" value="Prototype" />
+	</bean>
+</beans>

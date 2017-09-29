@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	default-init-method="init" default-destroy-method="destroy"> <!-- init and destroy for all the beans -->
+
+	<bean id="checkReqScope" class="com.practise.bean.CheckHttpReqScope"
+		scope="request">
+		<property name="name" value="Request Scope" />
+	</bean>
+
+	<bean id="checkSessionScope" class="com.practise.bean.CheckHttpSessionScope"
+		scope="session">
+		<property name="name" value="Session Scope" />
+	</bean>
+</beans>

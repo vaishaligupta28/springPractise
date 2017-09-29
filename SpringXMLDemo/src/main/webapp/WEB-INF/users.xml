@@ -1,0 +1,13 @@
+<users>
+	<user>
+		<id></id>
+		<name></name>
+		<mob></mob>
+		<mobile></mobile>
+	</user>
+	<user>
+		<id></id>
+		<name></name>
+	</user>
+	<user></user>
+</users>

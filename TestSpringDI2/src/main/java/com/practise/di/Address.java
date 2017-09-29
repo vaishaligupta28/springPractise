@@ -1,0 +1,59 @@
+package com.practise.di;
+
+public class Address {
+	private String addressLine1, streetno, pin, city, state, country;
+
+	public String getAddressLine1() {
+		return addressLine1;
+	}
+
+	public void setAddressLine1(String addressLine1) {
+		this.addressLine1 = addressLine1;
+	}
+
+	public String getStreetno() {
+		return streetno;
+	}
+
+	public void setStreetno(String streetno) {
+		this.streetno = streetno;
+	}
+
+	public String getPin() {
+		return pin;
+	}
+
+	public void setPin(String pin) {
+		this.pin = pin;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	@Override
+	public String toString() {
+		return "Address [addressLine1=" + addressLine1 + ", streetno=" + streetno + ", pin=" + pin + ", city=" + city
+				+ ", state=" + state + ", country=" + country + "]";
+	}
+}

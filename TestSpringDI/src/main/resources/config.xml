@@ -1,0 +1,100 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="user1" class="com.practise.di.User">
+		<constructor-arg value="vaishali"></constructor-arg>
+		<constructor-arg value="g28vaish@gmail.com"></constructor-arg>
+	</bean>
+
+	<bean id="user2" class="com.practise.di.User">
+		<constructor-arg value="vaishali"></constructor-arg>
+		<constructor-arg value="g28vaish@gmail.com"></constructor-arg>
+	</bean>
+
+	<bean id="user3" class="com.practise.di.User">
+		<constructor-arg value="shreya"></constructor-arg>
+		<constructor-arg value="shreya@gmail.com"></constructor-arg>
+	</bean>
+
+	<bean id="user4" class="com.practise.di.User">
+		<constructor-arg value="sheeren"></constructor-arg>
+		<constructor-arg value="sheeren@gmail.com"></constructor-arg>
+	</bean>
+
+	<bean id="user5" class="com.practise.di.User">
+		<constructor-arg value="shmaita"></constructor-arg>
+		<constructor-arg value="shmaita@gmail.com"></constructor-arg>
+	</bean>
+
+	<bean id="user6" class="com.practise.di.User">
+		<constructor-arg value="tej"></constructor-arg>
+		<constructor-arg value="tej@gmail.com"></constructor-arg>
+	</bean>
+
+	<bean id="answer1" class="com.practise.di.Answer">
+		<constructor-arg value="Answer1......."></constructor-arg>
+		<constructor-arg value="date1"></constructor-arg>
+	</bean>
+
+	<bean id="answer2" class="com.practise.di.Answer">
+		<constructor-arg value="Answer2......."></constructor-arg>
+		<constructor-arg value="date2"></constructor-arg>
+	</bean>
+
+	<bean id="answer3" class="com.practise.di.Answer">
+		<constructor-arg value="Answer3......."></constructor-arg>
+		<constructor-arg value="date3"></constructor-arg>
+	</bean>
+
+	<bean id="checkDIwithColl" class="com.practise.di.CIwithList">
+		<constructor-arg value="10"></constructor-arg>
+		<constructor-arg value="Rattling six"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<ref bean="user1" />
+				<ref bean="user2" />
+				<ref bean="user3" />
+				<ref bean="user4" />
+				<ref bean="user5" />
+				<ref bean="user6" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="checkCIwithMap" class="com.practise.di.CIwithMap">
+		<constructor-arg value="10"></constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry key="Yash" value="Answer 4........"></entry>
+				<entry key="Mohit" value="Answer 5........"></entry>
+			</map>
+		</constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry key-ref="user1" value-ref="answer1"></entry>
+				<entry key-ref="user2" value-ref="answer2"></entry>
+				<entry key-ref="user3" value-ref="answer3"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+
+	<bean id="parentBean" class="com.practise.di.ConsInjectInheritingBean">
+		<constructor-arg value="20"></constructor-arg>
+		<constructor-arg value="Vaishali"></constructor-arg>
+	</bean>
+
+	<bean id="addressBean" class="com.practise.di.Address">
+		<constructor-arg value="Sai samarth business park, bridgelabz"></constructor-arg>
+		<constructor-arg value="Station road"></constructor-arg>
+		<constructor-arg value="400067"></constructor-arg>
+		<constructor-arg value="mumbai"></constructor-arg>
+		<constructor-arg value="maharashtra"></constructor-arg>
+		<constructor-arg value="India"></constructor-arg>
+	</bean>
+
+	<bean id="childBean" class="com.practise.di.ConsInjectInheritingBean"
+		parent="parentBean">
+		<constructor-arg ref="addressBean"></constructor-arg>
+	</bean>
+</beans>

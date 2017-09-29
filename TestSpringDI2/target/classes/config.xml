@@ -1,0 +1,100 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="user1" class="com.practise.di.User">
+		<property name="name" value="vaishali"></property>
+		<property name="email" value="g28vaish@gmail.com"></property>
+	</bean>
+
+	<bean id="user2" class="com.practise.di.User">
+		<property name="name" value="vaishali"></property>
+		<property name="email" value="g28vaish@gmail.com"></property>
+	</bean>
+
+	<bean id="user3" class="com.practise.di.User">
+		<property name="name" value="shreya"></property>
+		<property name="email" value="shreya@gmail.com"></property>
+	</bean>
+
+	<bean id="user4" class="com.practise.di.User">
+		<property name="name" value="sheeren"></property>
+		<property name="email" value="sheeren@gmail.com"></property>
+	</bean>
+
+	<bean id="user5" class="com.practise.di.User">
+		<property name="name" value="shmaita"></property>
+		<property name="email" value="shmaita@gmail.com"></property>
+	</bean>
+
+	<bean id="user6" class="com.practise.di.User">
+		<property name="name" value="tej"></property>
+		<property name="email" value="tej@gmail.com"></property>
+	</bean>
+
+	<bean id="answer1" class="com.practise.di.Answer">
+		<property name = "answer" value="Answer1......."></property>
+		<property name = "date" value="date1"></property>
+	</bean>
+
+	<bean id="answer2" class="com.practise.di.Answer">
+		<property name = "answer" value="Answer2......."></property>
+		<property name = "date" value="date2"></property>
+	</bean>
+
+	<bean id="answer3" class="com.practise.di.Answer">
+		<property name = "answer" value="Answer3......."></property>
+		<property name = "date" value="date3"></property>
+	</bean>
+
+	<bean id="checkSIwithColl" class="com.practise.di.SIwithList">
+		<property name="groupId" value="10"></property>
+		<property name="groupName" value="Rattling six"></property>
+		<property name="users">
+			<list>
+				<ref bean="user1" />
+				<ref bean="user2" />
+				<ref bean="user3" />
+				<ref bean="user4" />
+				<ref bean="user5" />
+				<ref bean="user6" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="checkSIwithMap" class="com.practise.di.SIwithMap">
+		<property name="id" value="10"></property>
+		<property name="primitiveMap">
+			<map>
+				<entry key="Yash" value="Answer 4........"></entry>
+				<entry key="Mohit" value="Answer 5........"></entry>
+			</map>
+		</property>
+		<property name="answers">
+			<map>
+				<entry key-ref="user1" value-ref="answer1"></entry>
+				<entry key-ref="user2" value-ref="answer2"></entry>
+				<entry key-ref="user3" value-ref="answer3"></entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="parentBean" class="com.practise.di.SetterInjectInheritingBean">
+		<property name="id" value="20"></property>
+		<property name="name" value="Vaishali"></property>
+	</bean>
+
+	<bean id="addressBean" class="com.practise.di.Address">
+		<property name="addressLine1" value="Sai samarth business park, bridgelabz"></property>
+		<property name="streetno" value="Station road"></property>
+		<property name="pin" value="400067"></property>
+		<property name="city" value="mumbai"></property>
+		<property name="state" value="maharashtra"></property>
+		<property name="country" value="India"></property>
+	</bean>
+
+	<bean id="childBean" class="com.practise.di.SetterInjectInheritingBean"
+		parent="parentBean">
+		<property name="address" ref="addressBean"></property>
+	</bean>
+</beans>
