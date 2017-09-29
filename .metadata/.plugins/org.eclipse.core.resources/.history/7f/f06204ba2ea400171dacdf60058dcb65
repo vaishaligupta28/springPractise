@@ -1,0 +1,24 @@
+package com.practise.dao;
+
+class A {
+void a() {
+	System.out.println("Aa");
+}
+}
+
+class B extends A{
+	void b() {
+		System.out.println("Bb");
+	}
+}
+
+class test{
+	public static void main(String args[]) {
+		B a = new A();
+		a.
+		//B b = new B();
+		a = b;
+		a.a();
+	
+	}
+}

@@ -1,0 +1,4 @@
+browser-choice=1
+browsers=<?xml version\="1.0" encoding\="UTF-8"?>\n<web-browsers current\="1">\n<system/>\n<external location\="/usr/bin/firefox" name\="Firefox"/>\n<external location\="/usr/bin/google-chrome" name\="Chrome"/>\n</web-browsers>
+eclipse.preferences.version=1
+internalWebBrowserHistory=https\://accounts.google.com/o/oauth2/v2/auth?client_id\=1097381024907-lhi6fj5kavmbbij90ipagvvqaepbrvla.apps.googleusercontent.com&redirect_uri\=http\://localhost\:8080/SpringMVCTestProj/postGoogle&state\=3283a71c-dc76-44d8-8daf-283e2b241d6c&response_type\=code&scope\=profile%20email&approval_prompt\=force&access_type\=offline|*|http\://localhost\:8080/SpringMVCTestProj/|*|

@@ -1,0 +1,13 @@
+package com.practise.dao;
+
+class A {
+void a() {
+	System.out.println("Aa");
+}
+}
+
+class B{
+	void b() {
+		System.out.println(Ba);
+	}
+}

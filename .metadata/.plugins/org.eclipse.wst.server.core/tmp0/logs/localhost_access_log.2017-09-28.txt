@@ -1,0 +1,11 @@
+127.0.0.1 - - [28/Sep/2017:12:34:33 +0530] "GET / HTTP/1.1" 404 1073
+127.0.0.1 - - [28/Sep/2017:12:34:34 +0530] "GET /SpringMVCTestProj/ HTTP/1.1" 200 1613
+127.0.0.1 - - [28/Sep/2017:12:34:35 +0530] "GET /SpringMVCTestProj/loginG HTTP/1.1" 302 -
+127.0.0.1 - - [28/Sep/2017:12:37:20 +0530] "GET /SpringMVCTestProj/ HTTP/1.1" 200 1613
+127.0.0.1 - - [28/Sep/2017:12:37:20 +0530] "GET /favicon.ico HTTP/1.1" 404 1084
+127.0.0.1 - - [28/Sep/2017:12:37:22 +0530] "GET /SpringMVCTestProj/loginG HTTP/1.1" 302 -
+127.0.0.1 - - [28/Sep/2017:12:40:33 +0530] "GET / HTTP/1.1" 404 1073
+127.0.0.1 - - [28/Sep/2017:12:40:34 +0530] "GET /SpringMVCTestProj/ HTTP/1.1" 200 1613
+127.0.0.1 - - [28/Sep/2017:12:40:35 +0530] "GET /SpringMVCTestProj/loginG HTTP/1.1" 302 -
+127.0.0.1 - - [28/Sep/2017:12:40:43 +0530] "GET /SpringMVCTestProj/postGoogle?state=e7851bfe-e41d-4e72-8e4c-f645a38ef940&code=4/3ipS7piyimvgzRF1JSUpz7TEgeB6VqFpBcoBX_WuLtU HTTP/1.1" 200 460
+127.0.0.1 - - [28/Sep/2017:12:40:46 +0530] "GET /SpringMVCTestProj/logout HTTP/1.1" 200 1637
